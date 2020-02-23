@@ -15,9 +15,9 @@ int maxProfit(vector<int>& prices) {
 	return max;
 }
 int maxProfit_1(vector<int>& prices) {
+	if (prices.empty()) return 0;
 	int profit = 0;
-	int low = prices[0];
-
+	int low = prices[0];//需先判断prices是否为空
 	for (int i = 0; i < prices.size(); i++) {
 		if (prices[i] < low)
 			low = prices[i];
