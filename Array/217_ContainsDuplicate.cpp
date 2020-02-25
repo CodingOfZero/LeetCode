@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<set>
+#include<algorithm>
 using namespace std;
 /*
 Runtime: 48 ms, faster than 35.15% of C++ online submissions for Contains Duplicate.
@@ -14,6 +15,11 @@ bool containsDuplicate(vector<int>& nums) {
 	bool res=container.size() == nums.size() ? false : true;
 	return res;
 }
-int main() {
-
+bool containsDuplicate_2(vector<int>& nums) {
+	sort(nums.begin(), nums.end());
+	for (int i = 1; i < nums.size(); ++i)
+	{
+		if (nums[i] == nums[i - 1]) return true;
+	}
+	return false;
 }
