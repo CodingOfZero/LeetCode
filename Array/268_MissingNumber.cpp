@@ -32,11 +32,21 @@ missing	=4∧(0∧0)∧(1∧1)∧(2∧3)∧(3∧4)
 		=2
 ​4为向量长度
 */
-
 int missingNumber_2(vector<int>& nums) {
 	int t = nums.size();
 	for (int i = 0; i < nums.size(); i++) {
 		t ^= i ^ nums[i];
 	}
 	return t;
+}
+/*
+利用高斯公式
+*/
+int missingNumber_3(vector<int>& nums) {
+	int sum = nums.size() * (nums.size() + 1) / 2;
+	int temp = 0;
+	for (int i : nums) {
+		temp += i;
+	}
+	return sum-temp;
 }
