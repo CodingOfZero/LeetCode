@@ -79,17 +79,42 @@ public class SubsetSumProblem {
         return dp[n][sum];
     }
 
+    /**
+     * 通过对上面程序观察，可以发现，实际上我们仅仅需要直到前一行数据即可，故可由O（n*sum）的空间复杂度
+     * 优化为O(sum)
+     * 我们使用dp[2][sum+1] 其中2行数据，分别保存前一行与当前行,交替下去
+     */
+    public static boolean isSubsetSum2(int[] set,int n,int sum){
+        boolean[][] dp=new boolean[2][sum+1];
+
+        for(int i=0;i<=n;i++){
+            for(int j=0;j<=sum;j++){
+                //如果和为0，则均为true
+                if(j==0){
+                    dp[i%2][j]=true;
+                }else if(i==0){
+                    //n==0&&sum>0
+                    dp[i%2][j]=false;
+                }else if(set[i-1]>j){
+                    dp[i%2][j]=dp[(i+1)%2][j];
+                }else{
+                    dp[i%2][j]=dp[(i+1)%2][j]||dp[(i+1)%2][j-set[i-1]];
+                }
+            }
+        }
+        return dp[n%2][sum];
+    }
     public static void main(String[] args)
     {
-//        int[] set = { 3, 34, 4, 12, 5, 2 };
-//        int sum = 9;
-//        int n = set.length;
-//        if (isSubset(set, n, sum) == true)
-//            System.out.println("Found a subset"
-//                    + " with given sum");
-//        else
-//            System.out.println("No subset with"
-//                    + " given sum");
+        int[] set = { 3, 34, 4, 12, 5, 2 };
+        int sum = 9;
+        int n = set.length;
+        if (isSubset(set, n, sum) == true)
+            System.out.println("Found a subset"
+                    + " with given sum");
+        else
+            System.out.println("No subset with"
+                    + " given sum");
 
     }
 }
