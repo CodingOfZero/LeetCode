@@ -10,7 +10,6 @@ vector<int> getRow(int rowIndex) {
 	vector<vector<int>> res;
 	for (int i = 0; i < rowIndex+1; i++) {
 		vector<int> temp;
-
 		for (int j = 0; j < i + 1; j++) {
 			if (j == 0) {
 				temp.push_back(1);
@@ -23,9 +22,7 @@ vector<int> getRow(int rowIndex) {
 		}
 		if(i== rowIndex) return temp;
 		res.push_back(temp);
-
 	}
-	
 }
 
 int main() {

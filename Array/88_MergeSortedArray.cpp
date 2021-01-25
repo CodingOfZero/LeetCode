@@ -8,7 +8,6 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 	int len = m + n;
 	int a_index = m - 1;
 	int b_index = n - 1;
-
 	for (int i = len - 1; i >= 0; --i) {
 		if (n == 0) break; //如果nums2已空，则停止比较排序
 		if (m == 0) { 

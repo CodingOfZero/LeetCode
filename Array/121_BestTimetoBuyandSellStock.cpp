@@ -1,3 +1,8 @@
+/*
+
+只能从前到后，判断两数之差最大值
+
+*/
 #include<iostream>
 #include<vector>
 using namespace std;
