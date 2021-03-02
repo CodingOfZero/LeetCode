@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package Dynamic;
 
 /**
  * 求最子序列最大和
