@@ -7,6 +7,13 @@ package Lists;
  *
  */
 public class PartitionList_86 {
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
     public ListNode partition(ListNode head, int x) {
         ListNode leftDummyHead=new ListNode();
         ListNode rightDummyHead=new ListNode();

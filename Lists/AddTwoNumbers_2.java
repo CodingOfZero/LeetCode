@@ -6,6 +6,7 @@ package Lists;
  * 你可以假设这两个数字不包含任何前导零，除了数字0本身。
  */
 public class AddTwoNumbers_2 {
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(-1);
         ListNode curr = dummy;
