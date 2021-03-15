@@ -79,10 +79,10 @@ public class AccountsMerge_721 {
         for(List<String> emails: indexToEmail.values()){
             Collections.sort(emails);
             String name = emailToName.get(emails.get(0));
-            List<String> accout=new ArrayList<>();
-            accout.add(name);
-            accout.addAll(emails);
-            ans.add(accout);
+            List<String> account=new ArrayList<>();
+            account.add(name);
+            account.addAll(emails);
+            ans.add(account);
         }
         return ans;
     }
