@@ -6,7 +6,7 @@ package Dynamic;
  * L(i) = 1 + max( L(j) ) where 0 < j < i and arr[j] < arr[i]; or
  * L(i) = 1, if no such j exists.
  */
-public class LongestIncreasingSubsequence {
+public class LongestIncreasingSubsequence_300 {
     //以下为递归实现，时间复杂度为指数级
     private  int maxLis;
     public  int lis(int[] arr,int n){
