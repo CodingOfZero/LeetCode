@@ -8,6 +8,7 @@ import java.util.Stack;
 public class BinarySearchTreeIterator_173 {
     //本质上将中序遍历的非递归形式拆开
 
+
     private Stack<TreeNode> iter;
     public BinarySearchTreeIterator_173(TreeNode root) {
         iter =new Stack<>();
