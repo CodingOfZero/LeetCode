@@ -1,5 +1,9 @@
 package Math;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+
 /**
  * 找到第n个丑数
  */
@@ -41,7 +45,31 @@ public class UglyNumberII_264 {
         return nextUglyNo;
     }
 
-
+    /**
+     * 使用最小堆，初始时堆为空，首先将最小的丑数加入堆中，每次取出堆顶元素，则x是堆中最小的丑数，由于2x,3x,5x是丑数，因此将其加入堆
+     * 上述做法会导致堆内有重复元素，可用哈希去重
+    * @param n
+     * @return
+     */
+    public int nthUglyNumberHeap(int n) {
+        int[] factors={2,3,5};
+        HashSet<Long> hasInclude=new HashSet<>();
+        PriorityQueue<Long> heap=new PriorityQueue<>();
+        hasInclude.add(1L);
+        heap.add(1L);
+        int ugly=0;
+        for(int i=0;i<n;i++){
+            long cur = heap.poll();
+            ugly=(int) cur;
+            for(int factor:factors){
+                long next=cur*factor;
+                if(hasInclude.add(next)){
+                    heap.offer(next);
+                }
+            }
+        }
+        return ugly;
+    }
     /**
      * 暴力迭代,超时
      * @param n
