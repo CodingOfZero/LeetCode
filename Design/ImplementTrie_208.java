@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /**
  * 实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。
+ * 应用：单词补全，拼写检查
  */
 
 public class ImplementTrie_208 {
