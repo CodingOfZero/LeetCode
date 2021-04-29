@@ -7,6 +7,7 @@ import java.util.Map;
 
 /**
  * 找到字符串中所有字母异位词，异位词指字母相同，排列不同的字符串
+ * 与76题同样思路
  */
 public class FindAllAnagramsinaString_438 {
     public List<Integer> findAnagrams(String s, String p) {
