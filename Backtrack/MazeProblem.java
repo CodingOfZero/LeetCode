@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * 在迷宫中从四个角落中的任意一个出发，搜索到达中间顶点的所有路径，它可以从东南西北四个方向精确地移动n步，其中n是该单元格的值
  */
-public class mazeProblem {
+public class MazeProblem {
     private int len;
     private int[][] maze;
     private int[] row={0,1,-1, 0};
@@ -18,7 +18,7 @@ public class mazeProblem {
 //    private int[] rowPoint={0,0,len-1,len-1};//错误写法，len默认为0，这样就不是四个边角点了
 //    private int[] colPoint={0,len-1,0,len-1};//同上
 
-    public mazeProblem(int[][] maze){
+    public MazeProblem(int[][] maze){
         this.len=maze.length;
         this.maze=maze;
     }
@@ -125,7 +125,7 @@ public class mazeProblem {
             { 3, 5, 1, 3, 7, 5, 3, 6, 4 },
             { 6, 2, 4, 3, 4, 5, 4, 5, 1 }
         };
-        mazeProblem mazeProblem = new mazeProblem(maze);
+        Backtrack.MazeProblem mazeProblem = new Backtrack.MazeProblem(maze);
         mazeProblem.pathMaze();
 
 
