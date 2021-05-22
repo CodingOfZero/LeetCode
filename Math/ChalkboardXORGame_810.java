@@ -6,6 +6,7 @@ package Math;
  *      1.nums的长度为偶数
  *      2.nums所有值异或结果为0
  *
+ *
  * 博弈论
  */
 public class ChalkboardXORGame_810 {
