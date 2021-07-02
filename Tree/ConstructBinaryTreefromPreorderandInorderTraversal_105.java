@@ -3,18 +3,7 @@ package Tree;
 /**
  * 根据前序中序创建二叉树
  */
-class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode() {}
-     TreeNode(int val) { this.val = val; }
-     TreeNode(int val, TreeNode left, TreeNode right) {
-         this.val = val;
-         this.left = left;
-         this.right = right;
-     }
- }
+
 public class ConstructBinaryTreefromPreorderandInorderTraversal_105 {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         return buildTreeCore(preorder,0,inorder,0,inorder.length-1);
