@@ -33,8 +33,8 @@ public class MergeTwoBinaryTrees_617 {
     public static void main(String[] args) {
         int[] t1={1,3,2,5};
         int[] t2={2,1,3,-1,4,-1,7};
-        TreeNode tree1 = BuildTree.buildTree(t1);
-        TreeNode tree2 = BuildTree.buildTree(t2);
+        TreeNode tree1 = BuildTree.buildTree(t1,-1);
+        TreeNode tree2 = BuildTree.buildTree(t2,-1);
         TreeNode node = MergeTwoBinaryTrees_617.mergeTrees(tree1, tree2);
 
     }

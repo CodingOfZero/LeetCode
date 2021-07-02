@@ -97,7 +97,7 @@ public class PathSumIII_437 {
 
     public static void main(String[] args) {
         int[] input={10,5,-3,3,2,-1,11,3,-2,-1,1,-1,-1};
-        TreeNode node = BuildTree.buildTree(input);
+        TreeNode node = BuildTree.buildTree(input,-1);
         PathSumIII_437 path=new PathSumIII_437();
         int res = path.pathSum(node, 8);
         System.out.println(res);

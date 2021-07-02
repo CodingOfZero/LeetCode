@@ -50,7 +50,7 @@ public class PathSumII_113 {
 //    }
     public static void main(String[] args) {
         int[] input={5,4,8,11,-1,13,4,7,2,-1,-1,-1,-1,5,1};
-        TreeNode node = BuildTree.buildTree(input);
+        TreeNode node = BuildTree.buildTree(input,-1);
         PathSumII_113 path=new PathSumII_113();
         List<List<Integer>> lists = path.pathSum(node, 22);
         System.out.println("hh");
